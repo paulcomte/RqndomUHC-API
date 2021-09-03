@@ -7,6 +7,8 @@ package io.rqndomhax.uhcapi;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Set;
+
 public interface UHCAPI {
 
     JavaPlugin getPlugin();
@@ -14,5 +16,7 @@ public interface UHCAPI {
     IScoreboard getScoreboard();
 
     IRules getRules();
+
+    Set<RGamePlayer> getGamePlayers();
 
 }

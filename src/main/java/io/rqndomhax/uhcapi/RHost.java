@@ -37,16 +37,12 @@ public class RHost extends RValue {
 
     @SuppressWarnings("unchecked")
     public void addCoHost(Object object) {
-        Set<Object> coHosts = ((Set<Object>) getObject("coHosts"));
-        coHosts.add(object);
-        addObject("coHosts", coHosts);
+        ((Set<Object>) getObject("coHosts")).add(object);
     }
 
     @SuppressWarnings("unchecked")
     public void removeCoHost(Object object) {
-        Set<Object> coHosts = ((Set<Object>) getObject("coHosts"));
-        coHosts.remove(object);
-        addObject("coHosts", coHosts);
+        ((Set<Object>) getObject("coHosts")).remove(object);
     }
 
     private boolean isIn(Object object, Object target) {

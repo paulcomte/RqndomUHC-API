@@ -15,6 +15,8 @@ public interface UHCAPI {
 
     RHost getHostManager();
 
+    RDynamicInventory getInventories();
+
     IScoreboard getScoreboard();
 
     IRules getRules();

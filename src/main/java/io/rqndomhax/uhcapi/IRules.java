@@ -9,6 +9,8 @@ public interface IRules {
 
     String getGameTitle();
 
-    void setGameTitle(String newTitle);
+    void setGameTitle(String gameTitle);
+
+    GameValue getTimers();
 
 }

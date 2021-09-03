@@ -6,14 +6,13 @@
 package io.rqndomhax.uhcapi;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import org.bukkit.scoreboard.ScoreboardManager;
 
 public interface UHCAPI {
+
+    JavaPlugin getPlugin();
 
     IScoreboard getScoreboard();
 
     IRules getRules();
-
-    JavaPlugin getPlugin();
 
 }

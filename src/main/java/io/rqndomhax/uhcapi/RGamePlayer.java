@@ -9,7 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;
 
-import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public interface RGamePlayer {
@@ -24,8 +24,12 @@ public interface RGamePlayer {
 
     boolean isAlive();
 
-    List<UUID> getKills();
+    void setAlive(boolean isAlive);
+
+    Set<UUID> getKills();
 
     Location getPlayerLocation();
+
+    RValue getPlayerInfos();
 
 }

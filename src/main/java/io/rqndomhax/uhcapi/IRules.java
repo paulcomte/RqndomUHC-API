@@ -11,6 +11,8 @@ public interface IRules {
 
     void setGameTitle(String gameTitle);
 
-    GameValue getTimers();
+    RValue getTimers();
+
+    RScenarios getScenarios();
 
 }

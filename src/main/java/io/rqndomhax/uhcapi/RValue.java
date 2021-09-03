@@ -7,7 +7,7 @@ package io.rqndomhax.uhcapi;
 
 import java.util.HashMap;
 
-public class GameValue {
+public class RValue {
 
     final HashMap<String, Object> objects = new HashMap<>();
 

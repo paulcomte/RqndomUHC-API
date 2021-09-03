@@ -13,6 +13,8 @@ public interface UHCAPI {
 
     JavaPlugin getPlugin();
 
+    RHost getHostManager();
+
     IScoreboard getScoreboard();
 
     IRules getRules();

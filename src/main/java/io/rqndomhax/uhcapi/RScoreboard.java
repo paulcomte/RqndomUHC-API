@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 
 import java.util.Set;
 
-public interface IScoreboard {
+public interface RScoreboard {
 
     FastBoard newGameScoreboard(Player player);
 

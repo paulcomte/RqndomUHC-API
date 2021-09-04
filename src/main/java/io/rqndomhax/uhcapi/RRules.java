@@ -5,7 +5,7 @@
 
 package io.rqndomhax.uhcapi;
 
-public interface IRules {
+public interface RRules {
 
     String getGameTitle();
 

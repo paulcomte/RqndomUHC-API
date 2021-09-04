@@ -17,9 +17,9 @@ public interface UHCAPI {
 
     RDynamicInventory getInventories();
 
-    IScoreboard getScoreboard();
+    RScoreboard getScoreboard();
 
-    IRules getRules();
+    RRules getRules();
 
     Set<RGamePlayer> getGamePlayers();
 

@@ -6,7 +6,6 @@
 package io.rqndomhax.uhcapi;
 
 import io.rqndomhax.uhcapi.utils.inventory.RInventory;
-import io.rqndomhax.uhcapi.utils.inventory.RInventoryData;
 import org.bukkit.craftbukkit.libs.it.unimi.dsi.fastutil.Hash;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

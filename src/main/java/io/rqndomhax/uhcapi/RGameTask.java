@@ -9,11 +9,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import java.util.List;
 
-public interface IGameTask {
+public interface RGameTask {
 
-    List<Class<? extends GameTask>> getTasks();
+    List<Class<? extends RTask>> getTasks();
 
-    GameTask getCurrentTask();
+    RTask getCurrentTask();
 
     int getEpisode();
 

@@ -3,10 +3,9 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi;
+package io.rqndomhax.uhcapi.game;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.Collection;
 import java.util.List;
 
 public interface RGameTask {

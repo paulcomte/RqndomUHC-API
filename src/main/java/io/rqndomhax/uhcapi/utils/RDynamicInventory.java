@@ -3,10 +3,9 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi;
+package io.rqndomhax.uhcapi.utils;
 
 import io.rqndomhax.uhcapi.utils.inventory.RInventory;
-import org.bukkit.craftbukkit.libs.it.unimi.dsi.fastutil.Hash;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;

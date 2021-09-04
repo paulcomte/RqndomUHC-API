@@ -3,7 +3,7 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi;
+package io.rqndomhax.uhcapi.utils;
 
 import fr.mrmicky.fastboard.FastBoard;
 import org.bukkit.entity.Player;

@@ -3,8 +3,9 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi;
+package io.rqndomhax.uhcapi.game;
 
+import io.rqndomhax.uhcapi.utils.RValue;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.entity.Player;

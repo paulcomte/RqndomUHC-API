@@ -3,7 +3,10 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi;
+package io.rqndomhax.uhcapi.game;
+
+import io.rqndomhax.uhcapi.utils.RScenarios;
+import io.rqndomhax.uhcapi.utils.RValue;
 
 public interface RRules {
 

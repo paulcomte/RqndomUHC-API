@@ -1,11 +1,21 @@
 package io.rqndomhax.uhcapi.role;
 
+import io.rqndomhax.uhcapi.game.RGamePlayer;
+
+import java.util.HashMap;
+import java.util.Set;
+
 public interface RRoleManager {
 
-    public RRole createRole(String roleKey, Class<? extends RRole> role);
+    void createRole(String roleKey, Class<? extends RRole> role);
 
-    public void deleteRole(String roleKey);
+    void deleteRole(String roleKey);
 
-    public void deleteRole(Class<? extends RRole> role);
+    void deleteRole(Class<? extends RRole> target);
 
+    Set<RGamePlayer> getGamePlayer(RRole role);
+
+    RRole getRole(RGamePlayer gamePlayer);
+    
+    HashMap<String, RRole> getRoles();
 }

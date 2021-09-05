@@ -6,7 +6,7 @@
 package io.rqndomhax.uhcapi;
 
 import io.rqndomhax.uhcapi.game.RGamePlayer;
-import io.rqndomhax.uhcapi.game.RHost;
+import io.rqndomhax.uhcapi.game.RHostManager;
 import io.rqndomhax.uhcapi.game.RRules;
 import io.rqndomhax.uhcapi.utils.RDynamicInventory;
 import io.rqndomhax.uhcapi.utils.RScoreboard;
@@ -21,16 +21,14 @@ public interface UHCAPI {
 
     RWorldManager getWorldManager();
 
-    RHost getHostManager();
+    RHostManager getHostManager();
+
+    RScoreboard getScoreboardManager();
 
     RDynamicInventory getInventories();
-
-    RScoreboard getScoreboard();
 
     RRules getRules();
 
     Set<RGamePlayer> getGamePlayers();
-
-
 
 }

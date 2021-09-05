@@ -5,7 +5,8 @@
 
 package io.rqndomhax.uhcapi.game;
 
-import io.rqndomhax.uhcapi.utils.RScenarios;
+import io.rqndomhax.uhcapi.role.RRoleManager;
+import io.rqndomhax.uhcapi.scenarios.RScenariosManager;
 import io.rqndomhax.uhcapi.utils.RValue;
 
 public interface RRules {
@@ -16,6 +17,8 @@ public interface RRules {
 
     RValue getTimers();
 
-    RScenarios getScenarios();
+    RScenariosManager getScenariosManager();
+
+    RRoleManager getRolesManager();
 
 }

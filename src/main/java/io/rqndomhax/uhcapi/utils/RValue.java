@@ -6,21 +6,30 @@
 package io.rqndomhax.uhcapi.utils;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class RValue {
 
     final HashMap<String, Object> objects = new HashMap<>();
 
-    public void addObject(String objectName, Object object) {
-        objects.put(objectName, object);
+    public void addObject(String objectKey, Object object) {
+        objects.put(objectKey, object);
     }
 
-    public void removeObject(Object object) {
-        objects.remove(object);
+    public void removeKey(String key) {
+        objects.remove(key);
     }
 
-    public Object getObject(Object object) {
-        return objects.get(object);
+    public void removeObject(Object target) {
+        objects.remove(objects.entrySet().stream().filter(object -> object.getValue().equals(target)).map(Map.Entry::getKey).findFirst().orElse(null));
+    }
+
+    public Object getObject(String key) {
+        return objects.get(key);
+    }
+
+    public String getKey(Object target) {
+        return objects.entrySet().stream().filter(object -> object.getValue().equals(target)).map(Map.Entry::getKey).findFirst().orElse(null);
     }
 
     public HashMap<String, Object> getObjects() {

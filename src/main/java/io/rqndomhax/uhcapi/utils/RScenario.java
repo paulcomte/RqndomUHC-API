@@ -6,7 +6,6 @@
 package io.rqndomhax.uhcapi.utils;
 
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.plugin.java.JavaPlugin;
 
 public interface RScenario {
 

@@ -13,9 +13,21 @@ public interface RRoleManager {
 
     void deleteRole(Class<? extends RRole> target);
 
-    Set<RGamePlayer> getGamePlayer(RRole role);
+    Set<RGamePlayer> getGamePlayers(RRole role, Set<RGamePlayer> gamePlayers);
 
     RRole getRole(RGamePlayer gamePlayer);
     
     HashMap<String, RRole> getRoles();
+
+    void enableRole(RRole role);
+
+    void enableRole(String roleKey);
+
+    void disableRole(RRole role);
+
+    void disableRole(String roleKey);
+
+    HashMap<String, RRole> getActiveRoles();
+
+    void dispatchRoles(Set<RGamePlayer> gamePlayers);
 }

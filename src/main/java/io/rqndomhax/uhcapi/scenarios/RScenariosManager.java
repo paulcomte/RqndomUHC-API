@@ -5,11 +5,11 @@
 
 package io.rqndomhax.uhcapi.scenarios;
 
-import java.util.Set;
+import java.util.HashMap;
 
 public interface RScenariosManager {
 
-    Set<RScenario> getScenarios();
+    HashMap<String, RScenario> getScenarios();
 
     RScenario getScenario(String key);
 

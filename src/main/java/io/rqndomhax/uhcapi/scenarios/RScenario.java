@@ -5,11 +5,12 @@
 
 package io.rqndomhax.uhcapi.scenarios;
 
+import io.rqndomhax.uhcapi.utils.RValue;
 import org.bukkit.inventory.ItemStack;
 
 public interface RScenario {
 
-    ItemStack getConfigItem();
+    RValue getScenarioInfos();
 
     void init();
 

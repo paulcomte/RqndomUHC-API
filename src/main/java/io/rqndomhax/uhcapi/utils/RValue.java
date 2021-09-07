@@ -43,5 +43,4 @@ public class RValue {
                 .collect(Collectors.toMap(Map.Entry::getKey, entry -> cast.cast(entry.getValue())));
     }
 
-
 }

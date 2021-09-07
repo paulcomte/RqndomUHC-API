@@ -7,16 +7,22 @@ import java.util.Set;
 
 public interface RRoleManager {
 
-    void createRole(String roleKey, Class<? extends RRole> role);
+    void addTeam(String teamKey, Class<?> team);
+
+    void removeTeam(Class<?> team);
+
+    void removeTeam(String teamKey);
+
+    void createRole(String roleKey, RRole role);
 
     void deleteRole(String roleKey);
 
-    void deleteRole(Class<? extends RRole> target);
+    void deleteRole(RRole target);
 
     Set<RGamePlayer> getGamePlayers(RRole role, Set<RGamePlayer> gamePlayers);
 
     RRole getRole(RGamePlayer gamePlayer);
-    
+
     HashMap<String, RRole> getRoles();
 
     void enableRole(RRole role);

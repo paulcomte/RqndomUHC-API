@@ -12,21 +12,21 @@ import java.util.HashMap;
 
 public interface RDynamicInventory {
 
-    void addInventory(String inventoryName, RInventory inventory);
+    void addInventory(String inventoryKey, RInventory inventory);
 
-    void openInventory(String inventoryName, Player player);
+    void openInventory(String inventoryKey, Player player);
 
-    void openInventory(RInventory inventory, Player player);
+    void openInventory(RInventory inventoryKey, Player player);
 
     void onInventoryClose(Player player);
 
-    void updateInventory(String inventoryName);
+    void updateInventory(String inventoryKey);
 
     void updateInventory(RInventory inventory);
 
-    RInventory getInventory(String inventoryName);
+    RInventory getInventory(String inventoryKey);
 
-    String getInventoryName(RInventory inventory);
+    String getInventoryKey(RInventory inventory);
 
     HashMap<String, RInventory> getInventories();
 }

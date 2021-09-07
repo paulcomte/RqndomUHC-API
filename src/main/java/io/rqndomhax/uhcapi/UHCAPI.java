@@ -8,6 +8,7 @@ package io.rqndomhax.uhcapi;
 import io.rqndomhax.uhcapi.game.RGamePlayer;
 import io.rqndomhax.uhcapi.game.RHostManager;
 import io.rqndomhax.uhcapi.game.RRules;
+import io.rqndomhax.uhcapi.role.RRoleManager;
 import io.rqndomhax.uhcapi.utils.RDynamicInventory;
 import io.rqndomhax.uhcapi.utils.RScoreboard;
 import io.rqndomhax.uhcapi.world.RWorldManager;
@@ -26,6 +27,8 @@ public interface UHCAPI {
     RScoreboard getScoreboardManager();
 
     RDynamicInventory getInventories();
+
+    RRoleManager getRoleManager();
 
     RRules getRules();
 

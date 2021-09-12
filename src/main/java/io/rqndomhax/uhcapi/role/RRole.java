@@ -2,6 +2,7 @@ package io.rqndomhax.uhcapi.role;
 
 import io.rqndomhax.uhcapi.game.RGamePlayer;
 import io.rqndomhax.uhcapi.utils.RValue;
+import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -33,5 +34,9 @@ public interface RRole {
     void onRoleGiven();
 
     RValue getRoleInfos();
+
+    RGamePlayer getGamePlayer();
+
+    Player getPlayer();
 
 }

@@ -5,8 +5,6 @@
 
 package io.rqndomhax.uhcapi.scenarios;
 
-import io.rqndomhax.uhcapi.role.RRole;
-
 import java.util.HashMap;
 
 public interface RScenariosManager {

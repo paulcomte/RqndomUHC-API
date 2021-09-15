@@ -8,8 +8,6 @@ package io.rqndomhax.uhcapi;
 import io.rqndomhax.uhcapi.game.RGamePlayer;
 import io.rqndomhax.uhcapi.game.RHostManager;
 import io.rqndomhax.uhcapi.game.RRules;
-import io.rqndomhax.uhcapi.role.RRoleManager;
-import io.rqndomhax.uhcapi.scenarios.RScenariosManager;
 import io.rqndomhax.uhcapi.utils.RDynamicInventory;
 import io.rqndomhax.uhcapi.utils.RScoreboard;
 import io.rqndomhax.uhcapi.world.RWorldManager;
@@ -25,13 +23,23 @@ public interface UHCAPI {
 
     RWorldManager getWorldManager();
 
+    void setWorldManager(RWorldManager worldManager);
+
     RHostManager getHostManager();
+
+    void setHostManager(RHostManager hostManager);
 
     RScoreboard getScoreboardManager();
 
+    void setScoreboardManager(RScoreboard scoreboardManager);
+
     RDynamicInventory getInventories();
 
+    void setInventories(RDynamicInventory inventories);
+
     RRules getRules();
+
+    void setRules(RRules gameRules);
 
     Set<RGamePlayer> getGamePlayers();
 

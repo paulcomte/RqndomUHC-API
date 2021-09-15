@@ -11,7 +11,11 @@ import java.util.stream.Collectors;
 
 public class RValue {
 
-    final HashMap<String, Object> objects = new HashMap<>();
+    HashMap<String, Object> objects;
+
+    public RValue() {
+        setObjects(new HashMap<>());
+    }
 
     public void addObject(String objectKey, Object object) {
         objects.put(objectKey, object);
@@ -35,6 +39,10 @@ public class RValue {
 
     public HashMap<String, Object> getObjects() {
         return objects;
+    }
+
+    public void setObjects(HashMap<String, Object> objects) {
+        this.objects = objects;
     }
 
     public <V> Map<String, V> castObjects(final Class<V> cast) {

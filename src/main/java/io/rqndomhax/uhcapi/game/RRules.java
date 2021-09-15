@@ -19,6 +19,10 @@ public interface RRules {
 
     RScenariosManager getScenariosManager();
 
+    void setScenariosManager(RScenariosManager scenariosManager);
+
     RRoleManager getRolesManager();
+
+    void setRolesManager(RRoleManager rolesManager);
 
 }

@@ -21,14 +21,26 @@ public interface RScenariosManager {
 
     void unregisterScenario(RScenario scenario);
 
+    void activateScenario(RScenario scenario);
+
+    void activateScenario(String scenarioKey);
+
+    void deactivateScenario(RScenario scenario);
+
+    void deactivateScenario(String scenarioKey);
+
+    HashMap<String, RScenario> getActiveScenarios();
+
+    void enableScenarios();
+
     void enableScenario(RScenario scenario);
 
     void enableScenario(String scenarioKey);
 
+    void disableScenarios();
+
     void disableScenario(RScenario scenario);
 
     void disableScenario(String scenarioKey);
-
-    HashMap<String, RScenario> getActiveScenarios();
 
 }

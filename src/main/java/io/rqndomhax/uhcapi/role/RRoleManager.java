@@ -7,12 +7,6 @@ import java.util.Set;
 
 public interface RRoleManager {
 
-    void addTeam(String teamKey, Class<?> team);
-
-    void removeTeam(Class<?> team);
-
-    void removeTeam(String teamKey);
-
     void createRole(String roleKey, RRole role);
 
     void deleteRole(String roleKey);

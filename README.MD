@@ -10,4 +10,4 @@ https://javadoc.jitpack.io/#RqndomHax/RqndomUHC-API
 
 ## Authors
 
-* **RqndomHax* - *Initial work* - [Github](https://github.com/RqndomHax)
+* **RqndomHax** - *Initial work* - [Github](https://github.com/RqndomHax)

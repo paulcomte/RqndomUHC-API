@@ -3,16 +3,19 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi.utils;
+package io.rqndomhax.uhcapi.utils.inventory;
 
-import io.rqndomhax.uhcapi.utils.inventory.RInventory;
 import org.bukkit.entity.Player;
 
 import java.util.HashMap;
 
-public interface RDynamicInventory {
+public interface IDynamicInventoryManager {
 
     void addInventory(String inventoryKey, RInventory inventory);
+
+    void removeInventory(String inventoryKey);
+
+    void removeInventory(RInventory inventory);
 
     void openInventory(String inventoryKey, Player player);
 

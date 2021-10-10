@@ -9,35 +9,35 @@ import java.util.HashMap;
 
 public interface RScenariosManager {
 
-    HashMap<String, RScenario> getScenarios();
+    HashMap<String, IScenario> getScenarios();
 
-    RScenario getScenario(String scenarioKey);
+    IScenario getScenario(String scenarioKey);
 
-    void registerScenario(String scenarioKey, RScenario scenario);
+    void registerScenario(String scenarioKey, IScenario scenario);
 
     void unregisterScenario(String scenarioKey);
 
-    void unregisterScenario(RScenario scenario);
+    void unregisterScenario(IScenario scenario);
 
-    void activateScenario(RScenario scenario);
+    void activateScenario(IScenario scenario);
 
     void activateScenario(String scenarioKey);
 
-    void deactivateScenario(RScenario scenario);
+    void deactivateScenario(IScenario scenario);
 
     void deactivateScenario(String scenarioKey);
 
-    HashMap<String, RScenario> getActiveScenarios();
+    HashMap<String, IScenario> getActiveScenarios();
 
     void enableScenarios();
 
-    void enableScenario(RScenario scenario);
+    void enableScenario(IScenario scenario);
 
     void enableScenario(String scenarioKey);
 
     void disableScenarios();
 
-    void disableScenario(RScenario scenario);
+    void disableScenario(IScenario scenario);
 
     void disableScenario(String scenarioKey);
 

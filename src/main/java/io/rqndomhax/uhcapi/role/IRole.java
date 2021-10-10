@@ -1,13 +1,13 @@
 package io.rqndomhax.uhcapi.role;
 
-import io.rqndomhax.uhcapi.game.RGamePlayer;
+import io.rqndomhax.uhcapi.game.IGamePlayer;
 import io.rqndomhax.uhcapi.utils.RValue;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
 
-public interface RRole {
+public interface IRole {
 
     void onPlayerDeath(PlayerDeathEvent dead);
 
@@ -15,9 +15,9 @@ public interface RRole {
 
     void onEntityDamage(EntityDamageEvent damaged);
 
-    void onPlayerHit(RGamePlayer damaged);
+    void onPlayerHit(IGamePlayer damaged);
 
-    void onPlayerKill(RGamePlayer killed);
+    void onPlayerKill(IGamePlayer killed);
 
     void onSelfDeath(PlayerDeathEvent self);
 
@@ -35,7 +35,7 @@ public interface RRole {
 
     RValue getRoleInfos();
 
-    RGamePlayer getGamePlayer();
+    IGamePlayer getGamePlayer();
 
     Player getPlayer();
 

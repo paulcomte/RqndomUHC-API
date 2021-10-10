@@ -5,16 +5,16 @@
 
 package io.rqndomhax.uhcapi.scenarios;
 
-import io.rqndomhax.uhcapi.game.RGamePlayer;
+import io.rqndomhax.uhcapi.game.IGamePlayer;
 import io.rqndomhax.uhcapi.utils.RValue;
 
-public interface RScenario {
+public interface IScenario {
 
     RValue getScenarioInfos();
 
     void init();
 
-    void init(RGamePlayer gamePlayer);
+    void init(IGamePlayer gamePlayer);
 
     void destroy();
 }

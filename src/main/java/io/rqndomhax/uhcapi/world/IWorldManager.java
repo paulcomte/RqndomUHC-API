@@ -6,7 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
-public interface RWorldManager {
+public interface IWorldManager {
 
     World createWorld(String key, File newDir, String filePath) throws IOException;
 

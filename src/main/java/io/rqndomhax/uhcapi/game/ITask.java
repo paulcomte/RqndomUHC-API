@@ -5,7 +5,7 @@
 
 package io.rqndomhax.uhcapi.game;
 
-public interface RTask {
+public interface ITask {
 
     void loop();
 

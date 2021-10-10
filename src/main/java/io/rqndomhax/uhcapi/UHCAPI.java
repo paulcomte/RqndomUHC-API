@@ -5,12 +5,12 @@
 
 package io.rqndomhax.uhcapi;
 
-import io.rqndomhax.uhcapi.game.RGamePlayer;
-import io.rqndomhax.uhcapi.game.RHostManager;
-import io.rqndomhax.uhcapi.game.RRules;
-import io.rqndomhax.uhcapi.utils.RDynamicInventory;
-import io.rqndomhax.uhcapi.utils.RScoreboard;
-import io.rqndomhax.uhcapi.world.RWorldManager;
+import io.rqndomhax.uhcapi.game.IGamePlayer;
+import io.rqndomhax.uhcapi.game.IHostManager;
+import io.rqndomhax.uhcapi.game.IRules;
+import io.rqndomhax.uhcapi.utils.IScoreboard;
+import io.rqndomhax.uhcapi.utils.inventory.IDynamicInventoryManager;
+import io.rqndomhax.uhcapi.world.IWorldManager;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -21,32 +21,32 @@ public interface UHCAPI {
 
     JavaPlugin getPlugin();
 
-    RWorldManager getWorldManager();
+    IWorldManager getWorldManager();
 
-    void setWorldManager(RWorldManager worldManager);
+    void setWorldManager(IWorldManager worldManager);
 
-    RHostManager getHostManager();
+    IHostManager getHostManager();
 
-    void setHostManager(RHostManager hostManager);
+    void setHostManager(IHostManager hostManager);
 
-    RScoreboard getScoreboardManager();
+    IScoreboard getScoreboardManager();
 
-    void setScoreboardManager(RScoreboard scoreboardManager);
+    void setScoreboardManager(IScoreboard scoreboardManager);
 
-    RDynamicInventory getInventories();
+    IDynamicInventoryManager getInventories();
 
-    void setInventories(RDynamicInventory inventories);
+    void setInventories(IDynamicInventoryManager inventories);
 
-    RRules getRules();
+    IRules getRules();
 
-    void setRules(RRules gameRules);
+    void setRules(IRules gameRules);
 
-    Set<RGamePlayer> getGamePlayers();
+    Set<IGamePlayer> getGamePlayers();
 
-    RGamePlayer getGamePlayer(String username);
+    IGamePlayer getGamePlayer(String username);
 
-    RGamePlayer getGamePlayer(UUID uuid);
+    IGamePlayer getGamePlayer(UUID uuid);
 
-    RGamePlayer getGamePlayer(Player player);
+    IGamePlayer getGamePlayer(Player player);
 
 }

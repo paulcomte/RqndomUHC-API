@@ -5,7 +5,7 @@
 
 package io.rqndomhax.uhcapi.game;
 
-public interface RHostManager {
+public interface IHostManager {
 
     void setHost(Object object);
 

@@ -8,11 +8,11 @@ package io.rqndomhax.uhcapi.game;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-public interface RGameTask {
+public interface IGameTask {
 
-    List<Class<? extends RTask>> getTasks();
+    List<Class<? extends ITask>> getTasks();
 
-    RTask getCurrentTask();
+    ITask getCurrentTask();
 
     int getEpisode();
 

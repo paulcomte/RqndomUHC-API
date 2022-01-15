@@ -49,4 +49,6 @@ public interface UHCAPI {
 
     IGamePlayer getGamePlayer(Player player);
 
+    IGamePlayer registerGamePlayer(Player player);
+
 }

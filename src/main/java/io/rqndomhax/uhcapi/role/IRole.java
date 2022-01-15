@@ -33,6 +33,8 @@ public interface IRole {
 
     void onRoleGiven();
 
+    void onNewEpisode();
+
     RValue getRoleInfos();
 
     IGamePlayer getGamePlayer();

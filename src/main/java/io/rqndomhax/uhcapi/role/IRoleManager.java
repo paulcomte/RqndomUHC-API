@@ -7,11 +7,11 @@ import java.util.Set;
 
 public interface IRoleManager {
 
-    void createRole(String roleKey, IRole role);
+    void registerRole(String roleKey, IRole role);
 
-    void deleteRole(String roleKey);
+    void unregisterRole(String roleKey);
 
-    void deleteRole(IRole target);
+    void unregisterRole(IRole target);
 
     Set<IGamePlayer> getGamePlayers(IRole role, Set<IGamePlayer> gamePlayers);
 

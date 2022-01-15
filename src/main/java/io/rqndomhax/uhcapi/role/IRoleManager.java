@@ -13,9 +13,7 @@ public interface IRoleManager {
 
     void unregisterRole(IRole target);
 
-    Set<IGamePlayer> getGamePlayers(IRole role, Set<IGamePlayer> gamePlayers);
-
-    IRole getRole(IGamePlayer gamePlayer);
+    Set<IGamePlayer> getGamePlayers(Class<? extends IRole> role, Set<IGamePlayer> gamePlayers);
 
     HashMap<String, IRole> getRoles();
 

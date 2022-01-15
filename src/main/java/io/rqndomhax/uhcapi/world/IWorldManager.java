@@ -12,12 +12,12 @@ public interface IWorldManager {
 
     World createWorld(String key, File newDir, File file) throws IOException;
 
-    void deleteWorld(World world, boolean saveChunks) throws IOException;
+    void deleteWorld(World world) throws IOException;
 
-    void deleteWorld(String key, boolean saveChunks) throws IOException;
+    void deleteWorld(String key) throws IOException;
 
     World getWorld(String key);
 
     HashMap<String, World> getWorlds();
 
-}
+    }

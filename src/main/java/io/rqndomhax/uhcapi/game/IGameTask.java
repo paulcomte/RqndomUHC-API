@@ -5,6 +5,8 @@
 
 package io.rqndomhax.uhcapi.game;
 
+import io.rqndomhax.uhcapi.utils.RValue;
+
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -14,12 +16,10 @@ public interface IGameTask {
 
     ITask getCurrentTask();
 
-    int getEpisode();
-
-    int getElapsedTime();
-
-    int getElapsedRawTime();
+    RValue getGameInfos();
 
     boolean startNextTask() throws IllegalAccessException, InvocationTargetException, InstantiationException;
+
+    void endCurrentTask();
 
 }

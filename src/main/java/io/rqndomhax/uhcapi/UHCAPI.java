@@ -6,6 +6,7 @@
 package io.rqndomhax.uhcapi;
 
 import io.rqndomhax.uhcapi.game.IGamePlayer;
+import io.rqndomhax.uhcapi.game.IGameTask;
 import io.rqndomhax.uhcapi.game.IHostManager;
 import io.rqndomhax.uhcapi.game.IRules;
 import io.rqndomhax.uhcapi.utils.IScoreboard;
@@ -50,5 +51,9 @@ public interface UHCAPI {
     IGamePlayer getGamePlayer(Player player);
 
     IGamePlayer registerGamePlayer(Player player);
+
+    IGameTask getGameTaskManager();
+
+    void setGameTaskManager(IGameTask gameTask);
 
 }

@@ -1,7 +1,7 @@
 package io.rqndomhax.uhcapi.world;
 
+import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.WorldBorder;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +14,6 @@ public interface IWorldManager {
 
     World generateWorld(String key);
 
-    void setLobby(String key);
-    void setLobby(World world);
-
     void setMeetupWorld(String key);
     void setMeetupWorld(World world);
 
@@ -27,9 +24,19 @@ public interface IWorldManager {
     void deleteWorld(String key) throws IOException;
 
     World getWorld(String key);
-    World getLobby();
     World getMeetupWorld();
     World getPreparationWorld();
+
+    void generateDefaultLobby(Location center, int radius);
+    void destroyDefaultLobby(Location center, int radius);
+
+    void setLobby(Location location);
+    Location getLobby();
+
+    void generatePreparationWorld(); // The world pre-gen will follow its WorldBorder
+
+    void generateDefaultEndGameLobby();
+    void setEndGameLobby(Location location);
 
     HashMap<String, World> getWorlds();
 

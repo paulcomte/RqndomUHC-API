@@ -22,4 +22,8 @@ public interface IGameTask {
 
     void endCurrentTask();
 
+    void setGameState(String gameState);
+
+    String getGameState();
+
 }

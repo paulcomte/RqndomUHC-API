@@ -7,6 +7,7 @@
 
 package io.rqndomhax.uhcapi.utils.inventory;
 
+import io.rqndomhax.uhcapi.UHCAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -27,24 +28,26 @@ public abstract class RInventory implements InventoryHolder {
 
     private final Inventory inventory;
     private final PageController pageController;
-    private final Player owner;
     private final Map<Integer, Consumer<InventoryClickEvent>> mapShare;
     private final List<RInventoryRunnable> runnableList;
+    private final UHCAPI api;
 
-    public RInventory(Player owner, String name, int size) {
-        this.owner = owner;
+    public RInventory(UHCAPI api, String name, int size) {
+        this.api = api;
         this.inventory = Bukkit.createInventory(this, size, name);
         this.mapShare = new HashMap<>();
         this.pageController = new PageController(this);
         this.runnableList = new ArrayList<>();
+        refreshInventory();
     }
 
-    public RInventory(Player owner, String name, InventoryType inventoryType) {
-        this.owner = owner;
+    public RInventory(UHCAPI api, String name, InventoryType inventoryType) {
+        this.api = api;
         this.inventory = Bukkit.createInventory(this, inventoryType, name);
         this.mapShare = new HashMap<>();
         this.pageController = new PageController(this);
         this.runnableList = new ArrayList<>();
+        refreshInventory();
     }
 
     public void addItem(ItemStack itemStack){
@@ -127,9 +130,7 @@ public abstract class RInventory implements InventoryHolder {
         return board;
     }
 
-    public void open(){
-        this.owner.openInventory(this.inventory);
-    }
+    public void refreshInventory() {}
 
     protected void onClose(InventoryCloseEvent event){ }
     protected void onOpen(InventoryOpenEvent event){ }

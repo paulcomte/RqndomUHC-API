@@ -5,13 +5,13 @@ import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-public final class GamePlayerRemovedEvent extends Event implements Cancellable {
+public final class GamePlayerRemoveEvent extends Event implements Cancellable {
 
     private final IGamePlayer gamePlayer;
     private boolean cancel = false;
     private static final HandlerList HANDLERS_LIST = new HandlerList();
 
-    public GamePlayerRemovedEvent(IGamePlayer gamePlayer) {
+    public GamePlayerRemoveEvent(IGamePlayer gamePlayer) {
         this.gamePlayer = gamePlayer;
     }
 

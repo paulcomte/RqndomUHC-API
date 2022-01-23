@@ -3,6 +3,7 @@ package io.rqndomhax.uhcapi.managers;
 import io.rqndomhax.uhcapi.utils.HostConfig;
 
 import java.io.File;
+import java.util.List;
 
 public interface IHostConfigManager {
 
@@ -13,5 +14,9 @@ public interface IHostConfigManager {
     void deleteConfig(HostConfig config);
 
     void saveConfig(HostConfig config, boolean save);
+
+    List<HostConfig> getConfiguration();
+
+    void setConfigurations(List<HostConfig> configurations);
 
 }

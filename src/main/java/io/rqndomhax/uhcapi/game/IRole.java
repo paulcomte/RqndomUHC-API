@@ -1,4 +1,4 @@
-package io.rqndomhax.uhcapi.role;
+package io.rqndomhax.uhcapi.game;
 
 import io.rqndomhax.uhcapi.game.IGamePlayer;
 import io.rqndomhax.uhcapi.utils.RValue;

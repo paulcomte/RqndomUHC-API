@@ -3,7 +3,9 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi.scenarios;
+package io.rqndomhax.uhcapi.managers;
+
+import io.rqndomhax.uhcapi.game.IScenario;
 
 import java.util.HashMap;
 

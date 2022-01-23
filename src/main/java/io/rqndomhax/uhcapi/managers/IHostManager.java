@@ -3,7 +3,7 @@
  *  Github: https://github.com/RqndomHax
  */
 
-package io.rqndomhax.uhcapi.game;
+package io.rqndomhax.uhcapi.managers;
 
 import io.rqndomhax.uhcapi.utils.inventory.RInventory;
 import org.bukkit.plugin.java.JavaPlugin;

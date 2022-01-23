@@ -1,6 +1,7 @@
-package io.rqndomhax.uhcapi.role;
+package io.rqndomhax.uhcapi.managers;
 
 import io.rqndomhax.uhcapi.game.IGamePlayer;
+import io.rqndomhax.uhcapi.game.IRole;
 
 import java.util.HashMap;
 import java.util.Set;

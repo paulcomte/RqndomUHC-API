@@ -7,11 +7,12 @@ package io.rqndomhax.uhcapi;
 
 import io.rqndomhax.uhcapi.game.IGamePlayer;
 import io.rqndomhax.uhcapi.game.IGameTask;
-import io.rqndomhax.uhcapi.game.IHostManager;
+import io.rqndomhax.uhcapi.managers.IHostConfigManager;
+import io.rqndomhax.uhcapi.managers.IHostManager;
 import io.rqndomhax.uhcapi.game.IRules;
 import io.rqndomhax.uhcapi.utils.IScoreboard;
 import io.rqndomhax.uhcapi.utils.inventory.IDynamicInventoryManager;
-import io.rqndomhax.uhcapi.world.IWorldManager;
+import io.rqndomhax.uhcapi.managers.IWorldManager;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -24,23 +25,15 @@ public interface UHCAPI {
 
     IWorldManager getWorldManager();
 
-    void setWorldManager(IWorldManager worldManager);
-
     IHostManager getHostManager();
 
-    void setHostManager(IHostManager hostManager);
+    IHostConfigManager getHostConfigManager();
 
     IScoreboard getScoreboardManager();
 
-    void setScoreboardManager(IScoreboard scoreboardManager);
-
     IDynamicInventoryManager getInventories();
 
-    void setInventories(IDynamicInventoryManager inventories);
-
     IRules getRules();
-
-    void setRules(IRules gameRules);
 
     Set<IGamePlayer> getGamePlayers();
 
@@ -53,7 +46,5 @@ public interface UHCAPI {
     IGamePlayer registerGamePlayer(Player player);
 
     IGameTask getGameTaskManager();
-
-    void setGameTaskManager(IGameTask gameTask);
 
 }

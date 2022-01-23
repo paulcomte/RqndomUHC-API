@@ -38,7 +38,6 @@ public abstract class RInventory implements InventoryHolder {
         this.mapShare = new HashMap<>();
         this.pageController = new PageController(this);
         this.runnableList = new ArrayList<>();
-        refreshInventory();
     }
 
     public RInventory(UHCAPI api, String name, InventoryType inventoryType) {
@@ -47,7 +46,6 @@ public abstract class RInventory implements InventoryHolder {
         this.mapShare = new HashMap<>();
         this.pageController = new PageController(this);
         this.runnableList = new ArrayList<>();
-        refreshInventory();
     }
 
     public void addItem(ItemStack itemStack){
@@ -138,6 +136,10 @@ public abstract class RInventory implements InventoryHolder {
     @Override
     public Inventory getInventory() {
         return inventory;
+    }
+
+    public UHCAPI getApi() {
+        return this.api;
     }
 
     final Map<Integer, Consumer<InventoryClickEvent>> getMapShare() {

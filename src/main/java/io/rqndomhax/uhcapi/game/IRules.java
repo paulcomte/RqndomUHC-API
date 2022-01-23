@@ -5,17 +5,15 @@
 
 package io.rqndomhax.uhcapi.game;
 
-import io.rqndomhax.uhcapi.role.IRoleManager;
-import io.rqndomhax.uhcapi.scenarios.RScenariosManager;
+import io.rqndomhax.uhcapi.managers.IRoleManager;
+import io.rqndomhax.uhcapi.managers.RScenariosManager;
 import io.rqndomhax.uhcapi.utils.RValue;
 
 public interface IRules {
 
-    String getGameTitle();
-
-    void setGameTitle(String gameTitle);
-
     RValue getGameInfos();
+
+    void setGameInfos(RValue gameInfos);
 
     RScenariosManager getScenariosManager();
 

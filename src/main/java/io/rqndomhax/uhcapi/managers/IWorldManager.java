@@ -1,4 +1,4 @@
-package io.rqndomhax.uhcapi.world;
+package io.rqndomhax.uhcapi.managers;
 
 import org.bukkit.Location;
 import org.bukkit.World;

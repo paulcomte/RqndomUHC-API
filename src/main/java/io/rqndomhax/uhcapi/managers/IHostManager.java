@@ -6,6 +6,7 @@
 package io.rqndomhax.uhcapi.managers;
 
 import io.rqndomhax.uhcapi.utils.inventory.RInventory;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
@@ -27,8 +28,14 @@ public interface IHostManager {
 
     void removeCoHost(Object object);
 
-    HashMap<JavaPlugin, RInventory> getPluginConfigInventory(); // The config inventory must be stored in the DynamicInventoryManager
+    void sendToHost(String message); // Send a message to all host connected on the server
 
-    RInventory getConfigInventory(JavaPlugin plugin);
+    HashMap<JavaPlugin, RInventory> getPluginsConfigInventory(); // The config inventory must be stored in the DynamicInventoryManager
+
+    RInventory getPluginConfigInventory(JavaPlugin plugin);
+
+    ItemStack[] getHostLobbyInventory(); // It will return an inventory the size of a player's inventory
+
+    void setHostLobbyInventory(ItemStack[] newInventory); // It has to be an inventory the size of a player's inventory
 
 }

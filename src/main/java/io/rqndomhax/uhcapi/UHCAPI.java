@@ -11,6 +11,7 @@ import io.rqndomhax.uhcapi.managers.IHostConfigManager;
 import io.rqndomhax.uhcapi.managers.IHostManager;
 import io.rqndomhax.uhcapi.game.IRules;
 import io.rqndomhax.uhcapi.utils.IScoreboard;
+import io.rqndomhax.uhcapi.utils.RValue;
 import io.rqndomhax.uhcapi.utils.inventory.IDynamicInventoryManager;
 import io.rqndomhax.uhcapi.managers.IWorldManager;
 import org.bukkit.entity.Player;
@@ -46,5 +47,7 @@ public interface UHCAPI {
     IGamePlayer registerGamePlayer(Player player);
 
     IGameTask getGameTaskManager();
+
+    RValue getGameMessages();
 
 }

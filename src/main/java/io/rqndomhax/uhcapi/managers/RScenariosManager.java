@@ -13,6 +13,8 @@ public interface RScenariosManager {
 
     HashMap<String, IScenario> getScenarios();
 
+    void clearScenarios();
+
     IScenario getScenario(String scenarioKey);
 
     void registerScenario(String scenarioKey, IScenario scenario);
@@ -30,6 +32,8 @@ public interface RScenariosManager {
     void deactivateScenario(String scenarioKey);
 
     HashMap<String, IScenario> getActiveScenarios();
+
+    void clearActiveScenarios();
 
     void enableScenarios();
 

@@ -18,6 +18,8 @@ public interface IRoleManager {
 
     HashMap<String, IRole> getRoles();
 
+    void clearRoles();
+
     void enableRole(IRole role);
 
     void enableRole(String roleKey);
@@ -27,6 +29,8 @@ public interface IRoleManager {
     void disableRole(String roleKey);
 
     HashMap<String, IRole> getActiveRoles();
+
+    void clearActiveRoles();
 
     void dispatchRoles(Set<IGamePlayer> gamePlayers);
 

@@ -18,6 +18,14 @@ public interface IHostManager {
 
     String getHostName();
 
+    UUID getStartInventory();
+
+    void setStartInventory(UUID editor);
+
+    UUID getDeathInventory();
+
+    void setDeathInventory(UUID editor);
+
     void setHost(Object object); // You can give a Player, OfflinePlayer, String, and UUID
 
     boolean isHost(Object object);

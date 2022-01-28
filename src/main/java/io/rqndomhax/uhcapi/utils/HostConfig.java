@@ -1,10 +1,11 @@
 package io.rqndomhax.uhcapi.utils;
 
+import java.util.HashMap;
 import java.util.UUID;
 
 public final class HostConfig {
 
-    private final RValue gameInfos;
+    private RValue gameInfos;
     private String name;
     private final String filePath;
 
@@ -16,6 +17,10 @@ public final class HostConfig {
 
     public RValue getGameInfos() {
         return gameInfos;
+    }
+
+    public void setGameInfos(RValue gameInfos) {
+        this.gameInfos = gameInfos;
     }
 
     public String getName() {
@@ -31,6 +36,14 @@ public final class HostConfig {
     }
 
     public HostConfig copy() {
+        RValue gameInfos = new RValue();
+        gameInfos.setObjects(new HashMap<>(this.gameInfos.getObjects()));
+        return new HostConfig(gameInfos, name, filePath);
+    }
+
+    public HostConfig duplicate() {
+        RValue gameInfos = new RValue();
+        gameInfos.setObjects(new HashMap<>(this.gameInfos.getObjects()));
         return new HostConfig(gameInfos, name + " copy", "configs/" + UUID.randomUUID().toString().substring(0, 8) + ".cfg");
     }
 

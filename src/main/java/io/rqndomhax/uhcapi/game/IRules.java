@@ -17,10 +17,6 @@ public interface IRules {
 
     RScenariosManager getScenariosManager();
 
-    void setScenariosManager(RScenariosManager scenariosManager);
-
     IRoleManager getRolesManager();
-
-    void setRolesManager(IRoleManager rolesManager);
 
 }

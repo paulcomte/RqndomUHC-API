@@ -12,6 +12,7 @@ public interface IWorldManager {
     World createWorld(String key, File newDir, String filePath) throws IOException;
     World createWorld(String key, File newDir, File file) throws IOException;
 
+    void createWorld(String key);
     World generateWorld(String key);
 
     void setMeetupWorld(String key);

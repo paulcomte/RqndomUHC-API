@@ -29,4 +29,6 @@ public interface IRoleManager {
     HashMap<String, IRole> getActiveRoles();
 
     void dispatchRoles(Set<IGamePlayer> gamePlayers);
+
+    boolean activeRolesDifferentTeam();
 }

@@ -31,6 +31,8 @@ public interface IGamePlayer {
 
     Location getPlayerLocation();
 
+    void setPlayerLocation(Location playerLocation);
+
     RValue getPlayerInfos();
 
 }

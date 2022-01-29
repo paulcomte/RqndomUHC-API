@@ -39,6 +39,8 @@ public interface IWorldManager {
     void generateDefaultEndGameLobby();
     void setEndGameLobby(Location location);
 
+    void clearPlayerData(File path);
+
     HashMap<String, World> getWorlds();
 
 }

@@ -2,6 +2,7 @@ package io.rqndomhax.uhcapi.game;
 
 import io.rqndomhax.uhcapi.game.IGamePlayer;
 import io.rqndomhax.uhcapi.utils.RValue;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.EntityDeathEvent;
@@ -16,6 +17,10 @@ public interface IRole {
     void onEntityDamage(EntityDamageEvent damaged);
 
     void onPlayerHit(IGamePlayer damaged);
+
+    void onPlayerAttacked(IGamePlayer attacker, IGamePlayer attacked);
+
+    void onPlayerAttacked(Entity attacker, IGamePlayer attacked);
 
     void onPlayerKill(IGamePlayer killed);
 

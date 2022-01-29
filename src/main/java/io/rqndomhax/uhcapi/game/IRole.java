@@ -10,7 +10,7 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 
 public interface IRole {
 
-    void onPlayerDeath(PlayerDeathEvent dead);
+    void onPlayerDeath(IGamePlayer dead);
 
     void onEntityDeath(EntityDeathEvent dead);
 

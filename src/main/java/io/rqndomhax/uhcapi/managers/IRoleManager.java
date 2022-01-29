@@ -18,6 +18,8 @@ public interface IRoleManager {
 
     HashMap<String, IRole> getRoles();
 
+    HashMap<String, IRole> getRolesStartingByKey(String key);
+
     void clearRoles();
 
     void enableRole(IRole role);

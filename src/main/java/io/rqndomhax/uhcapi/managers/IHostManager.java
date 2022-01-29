@@ -38,6 +38,8 @@ public interface IHostManager {
 
     void sendToHost(String message); // Send a message to all host connected on the server
 
+    void putPluginConfigInventory(JavaPlugin plugin, RInventory inventory); // The config inventory must be stored in the DynamicInventoryManager
+
     HashMap<JavaPlugin, RInventory> getPluginsConfigInventory(); // The config inventory must be stored in the DynamicInventoryManager
 
     RInventory getPluginConfigInventory(JavaPlugin plugin);

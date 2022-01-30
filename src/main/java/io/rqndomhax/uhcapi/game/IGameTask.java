@@ -5,6 +5,7 @@
 
 package io.rqndomhax.uhcapi.game;
 
+import io.rqndomhax.uhcapi.game.ITask;
 import io.rqndomhax.uhcapi.utils.RValue;
 
 import java.lang.reflect.InvocationTargetException;
@@ -25,5 +26,9 @@ public interface IGameTask {
     void setGameState(String gameState);
 
     String getGameState();
+
+    List<ITask> getBeforeTasks();
+
+    List<ITask> getAfterTasks();
 
 }

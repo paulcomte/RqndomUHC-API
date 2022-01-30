@@ -12,6 +12,8 @@ public interface IRole {
 
     void onPlayerDeath(IGamePlayer dead);
 
+    void onPlayerDeathEvent(PlayerDeathEvent event);
+
     void onEntityDeath(EntityDeathEvent dead);
 
     void onEntityDamage(EntityDamageEvent damaged);

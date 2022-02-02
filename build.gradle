@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'signing'
+    id 'maven-publish'
     id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
@@ -21,10 +23,56 @@ dependencies {
     implementation 'fr.mrmicky:fastboard:1.2.0'
 }
 
-test {
-    useJUnitPlatform()
+java {
+    withJavadocJar()
+    withSourcesJar()
 }
 
 shadowJar {
     relocate 'fr.mrmicky.fastboard', 'io.rqndomhax.fastboard'
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifactId = 'rqndomuhc-api'
+            artifact shadowJar
+            pom {
+                name = 'RqndomUHC'
+                description = 'An API for Minecraft UHC Plugins'
+                url = 'https://github.com/RqndomHax/RqndomUHC-API'
+                developers {
+                    developer {
+                        id = 'rqndomhax'
+                        name = 'RqndomHax'
+                        email = 'paul.codepro@gmail.com'
+                    }
+                }
+                scm {
+                    connection = 'scm:git:https://github.com/RqndomHax/RqndomUHC-API.git'
+                    developerConnection = 'scm:git:git@github.com:RqndomHax/RqndomUHC-API.git'
+                    url = 'https://github.com/RqndomHax/RqndomUHC-API'
+                }
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            def releasesRepoUrl = 'https://s01.oss.sonatype.org/content/repositories/releases/'
+            def snapshotsRepoUrl = 'https://s01.oss.sonatype.org/content/repositories/snapshots/'
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            allowInsecureProtocol = false
+            credentials {
+                username ossrhUsername
+                password ossrhPassword
+            }
+        }
+    }
+}
+
+javadoc {
+    if(JavaVersion.current().isJava9Compatible()) {
+        options.addBooleanOption('html5', true)
+    }
 }

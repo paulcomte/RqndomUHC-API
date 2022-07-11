@@ -1,8 +1,7 @@
 # Rqndom-UHC-API
 
-### JavaDoc
-
-https://javadoc.jitpack.io/#RqndomHax/RqndomUHC-API
+### Implementation
+<https://github.com/RqndomHax/RqndomUHC>
 
 ### Documentation
 

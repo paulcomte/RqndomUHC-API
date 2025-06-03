@@ -5,7 +5,7 @@
 
 ### Documentation
 
-<rqndomhax.gitbook.io/rqndomuhc-api/>
+<https://rqndomhax.gitbook.io/rqndomuhc-api/>
 
 ## Authors
 
